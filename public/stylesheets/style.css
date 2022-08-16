@@ -1,0 +1,114 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+}
+body {
+  background: #000;
+  color: #fff;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+header,.left,.right{
+  position:absolute;
+}
+header{
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  height: 150px;
+  /* border: solid #fff 1px; */
+}
+header h1{
+  font-size: 40px;
+  height: 60px;
+  line-height: 60px;
+
+}
+.left{
+  left: 10px;
+  top: 170px;
+  bottom: 10px;
+  width: 200px;
+  /* border: solid #fff 1px; */
+  overflow: auto;
+}
+.left ul{
+  overflow: auto;
+}
+.left ul li{
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+.left ul li.selected{
+  color: green;
+  
+}
+.right{
+  right: 10px;
+  top: 170px;
+  left:220px;
+  bottom: 10px;
+  /* border: solid #fff 1px; */
+  overflow:auto
+}
+a {
+  color: #00B7FF;
+}
+header ::-webkit-file-upload-button{
+  display:inline-block;
+  margin:0 auto;
+  list-style-type:none
+}
+header ul{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header ul li{
+    /* display: flex; */
+    /* float: left; */
+    /* align-items: center;
+    justify-content: center; */
+    
+    height:30px;
+    line-height:30px;
+    width:80px;
+    border:solid 1px #fff;
+    border-radius: 5px;
+    /* border-right:solid 1px #fff;
+    border-bottom:solid 1px #fff; */
+    cursor:pointer
+}
+header ul .type.selected{
+  background:#fff;
+  color:#000
+}
+/* header ul li:first-child{border-left:solid 1px #fff;border-top-left-radius:5px;border-bottom-left-radius:5px}
+header ul li :last-child
+{border-top-right-radius:5px;border-bottom-right-radius:5px} */
+li
+{display:list-item;text-align:-webkit-match-parent}
+
+/* 优化input */
+input[type='range']{
+  height: 8px;
+  background: #999;
+  border-radius: 10px;
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb{
+  height: 12px;
+  width: 12px;
+  background: #fff;
+  border-radius: 10px;
+}

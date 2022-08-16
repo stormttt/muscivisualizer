@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+      <ul>
+        <li data-type="dot" class="type">Dot</li>
+        <li data-type="column" class="type selected">Column</li>
+      </ul>
+      <p><input type="range" id="volume" min="0" max="100" value="60"></p>
+      <!-- todo 显示播放时间 -->
+      <!-- <div class="time"><p id="currentTime">current time</p></div> -->
+      
+    </header>
+    
+    <div class="left">
+      <ul id="list">
+        <% music.forEach((name)=>{%>
+          <%if(name!==".DS_Store"){%>
+            <li title="<%=name%>" class="music"><%=name%></li>
+          <%} %>
+        <%}) %>
+              
+      </ul>
+    </div>
+    
+    <div class="right" id="box"></div>
+    <!-- 引入时注意只用写public后面的路径 -->
+    <!-- <script  src="/javascripts/script.js"></script> -->
+    <script  src="/javascripts/musicVisualizer.js"></script>
+    <script  src="/javascripts/index.js"></script>
+    
+  </body>
+</html>
